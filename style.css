@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', 'Poppins', sans-serif;
+  background: linear-gradient(to right, #84fab0, #8fd3f4);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s ease;
+}
+
+.container {
+  background: #ffffff;
+  padding: 30px 25px;
+  border-radius: 18px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  max-width: 640px;
+  width: 90%;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+h1 {
+  color: #2e8b57;
+  text-align: center;
+  margin-bottom: 5px;
+}
+
+p {
+  text-align: center;
+  color: #555;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+textarea {
+  width: 100%;
+  padding: 14px;
+  font-size: 16px;
+  border: 2px solid #2e8b57;
+  border-radius: 10px;
+  resize: vertical;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.language-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.language-row > div {
+  flex: 1;
+}
+
+.language-row label {
+  display: block;
+  margin-bottom: 6px;
+  color: #2e8b57;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+select {
+  width: 100%;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  background-color: #f9f9f9;
+}
+
+button {
+  background-color: #2e8b57;
+  color: #fff;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #256e48;
+  transform: scale(1.02);
+}
+
+#outputText {
+  background: #f2fef4;
+  color: #222;
+  padding: 16px;
+  border-radius: 10px;
+  min-height: 60px;
+  border: 1px solid #cdeccd;
+  margin-top: 20px;
+  white-space: pre-wrap;
+  font-size: 15px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .language-row {
+    flex-direction: column;
+  }
+}
